@@ -32,13 +32,13 @@ BNyRyWchglQevmFSwDM1mz0dkFUle/TSJ4pFSPzNUWDeSo4QNoWmtJkT1MMjM1rZ
 	$encrypted = "";  //已加密的数据 
 	$decrypted = "";   //解密后的原始数据
 	  
-	echo "source data:",$data,"\n";  
+	echo "source data:".$data."\n";  
 	  
 	echo "private key encrypt:\n";  
 	  
 	openssl_private_encrypt($data,$encrypted,$pi_key);//私钥加密  
 	$encrypted = base64_encode($encrypted);//加密后的内容通常含有特殊字符，需要编码转换下，在网络间通过url传输时要注意base64编码是否是url安全的  
-	echo $encrypted,"\n";  
+	echo $encrypted."\n";  
 	  
 	echo "public key decrypt:\n";  
 	  
