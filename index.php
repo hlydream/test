@@ -64,6 +64,7 @@ BNyRyWchglQevmFSwDM1mz0dkFUle/TSJ4pFSPzNUWDeSo4QNoWmtJkT1MMjM1rZ
 		//准备post的数据
 	    $postdata = http_build_query($data); 
 		//数据头
+		$url = 'http://182.254.148.243/login.php';
         $opts = array('http' =>
                       array( 
                           'method'  => 'POST', 
