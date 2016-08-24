@@ -73,6 +73,5 @@ BNyRyWchglQevmFSwDM1mz0dkFUle/TSJ4pFSPzNUWDeSo4QNoWmtJkT1MMjM1rZ
         );
         $context = stream_context_create($opts);
         $result = file_get_contents($url, false, $context);
-		exit;
 		print_r($result);
 	
