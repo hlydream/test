@@ -54,5 +54,25 @@ BNyRyWchglQevmFSwDM1mz0dkFUle/TSJ4pFSPzNUWDeSo4QNoWmtJkT1MMjM1rZ
   
 	echo "private key decrypt:<br/>";  
 	openssl_private_decrypt(base64_decode($encrypted),$decrypted,$pi_key);//私钥解密  
-	echo $decrypted,"<br/>";  
+	echo $decrypted,"<br/>";
+	
+	$data=array(
+			'name'=>'root',
+			'password'=>'nokia1320',
+			'aim'=>'login'
+		);
+		//准备post的数据
+	    $postdata = http_build_query($data); 
+		//数据头
+        $opts = array('http' =>
+                      array( 
+                          'method'  => 'POST', 
+                          'header'  => 'Content-type: application/x-www-form-urlencoded', 
+                          'content' => $postdata
+                      )
+        );
+        $context = stream_context_create($opts);
+        $result = file_get_contents($url, false, $context);
+		exit;
+		print_r($result);
 	
