@@ -1,6 +1,6 @@
 <?php
 	return array(
-		'private_key'='-----BEGIN RSA PRIVATE KEY-----
+		'private_key'=>'-----BEGIN RSA PRIVATE KEY-----
 MIICXAIBAAKBgQC+wRuQopAlmbEej8zUIajLGMXnM8UVCRQpiFYWXXr5wmdo4HSN
 ANIRF6wN6+dvFhN/gFLAe6udcJZuS74X18OdEf3pBNyRyWchglQevmFSwDM1mz0d
 kFUle/TSJ4pFSPzNUWDeSo4QNoWmtJkT1MMjM1rZ87Uaod2iLa7uUadpTQIDAQAB
@@ -16,10 +16,18 @@ MRGcDQEbtWiD1o8Xu9wlt57crVjepFVmLN47yxtGISrghxSW/wkp6V0uwgU2/AKG
 6YpnS9+f9dQyyjedhVLRyDtJctoHOgjD+bd8jtcf+RM=
 -----END RSA PRIVATE KEY-----
 ',
-		'public_key'='-----BEGIN PUBLIC KEY-----
+		'public_key'=>'-----BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC+wRuQopAlmbEej8zUIajLGMXn
 M8UVCRQpiFYWXXr5wmdo4HSNANIRF6wN6+dvFhN/gFLAe6udcJZuS74X18OdEf3p
 BNyRyWchglQevmFSwDM1mz0dkFUle/TSJ4pFSPzNUWDeSo4QNoWmtJkT1MMjM1rZ
 87Uaod2iLa7uUadpTQIDAQAB
------END PUBLIC KEY-----'
+-----END PUBLIC KEY-----',
+		'mysqli'=>array(
+			'sqlid'=>'root',
+			'sqlpassword'=>'nokia1320',
+			'sqlname'=>'test',
+			'sqlport'=>'3306',
+			'sqlprefix'=>'u_',
+			'sqlip'=>'localhost'
+		)
 	);

@@ -1,0 +1,33 @@
+1.登录获取token
+   	方式：post
+   	地址：http://www.****.com/index.php
+   	post数据：json
+   	格式：
+   		$data=array(
+				'name'=>'root',
+				'password'=>'nokia1320',
+				'aim'=>'login',
+		        'mod'=>'privilege'
+			);
+		name：用户名
+		password：密码
+		aim：login（固定）
+		mod：privilege（固定）
+		
+		1.讲$data数组转换为json
+		2.然后使用公钥加密
+		3.之后使用base64格式化
+		4.将加密后的数据存入数组 数组下标为data进行传输
+		例子：$postdata = http_build_query(
+				array(
+					'data'=>$data_base64
+			));
+			
+	返回：
+		格式：json
+		例子：
+		{"aim":"getToken","statu":"success","data":"bXQBfUCuBjjOH+KQ\/rjTUgjANV\/ueO4jvb2RfnxA="}
+		data：即为加密后token
+		解密步骤：base64_decode-----> 使用公钥解密---->然后获得解密后的json格式的token
+		例子：
+		{"aim":"getToken","statu":"success","token":"D2845oOY0YADP4Gquv"}
